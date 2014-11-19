@@ -1,0 +1,9 @@
+<div class="row">
+  <ul class="nav nav-tabs">
+    <li ng-repeat="lesson in lessons">
+      <a ng-href="#/lesson/{{ lesson.number }}">Leksjon {{ lesson.number }}</a>
+    </li>
+  </ul>
+</div>
+
+<div ui-view class="row"></div>
