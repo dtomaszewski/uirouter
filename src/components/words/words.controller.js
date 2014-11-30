@@ -7,11 +7,11 @@
   function WordsCtrl(WordsService, $stateParams) {
     var vm = this;
 
-    WordsService.query({lessonNumber: $stateParams.lessonNumber}, function(data) {
+    vm.lessonNumber = $stateParams.lessonNumber;
+
+    WordsService.query({lessonNumber: vm.lessonNumber}, function(data) {
       vm.words = data;
     });
-
-    vm.lessonNumber = $stateParams.lessonNumber;
 
   }
 })();

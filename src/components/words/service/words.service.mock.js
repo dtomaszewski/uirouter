@@ -48,8 +48,7 @@
     $httpBackend.whenGET(wordsUrl).respond(words);
 
     $httpBackend.whenGET(editingRegex).respond(function(method, url, data) {
-      var word = {'lessonNumber' : 0},
-        parameters = url.split('/'),
+      var parameters = url.split('/'),
         length = parameters.length,
         lessonNumber = parameters[length - 1],
         wordsFromLesson = [];
