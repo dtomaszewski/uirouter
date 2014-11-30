@@ -1,0 +1,10 @@
+<div class="lesson-details">
+  <h1>{{ vm.lesson.topic }}</h1>
+  <p>Szczegóły :</p>
+
+  <ul>
+    <li ng-repeat="subject in vm.lesson.subjects">{{subject.name}}: {{subject.details}} <a ui-sref="words({ lessonNumber: vm.lessonNumber })" >idź do</a></li>
+  </ul>
+</div>
+
+

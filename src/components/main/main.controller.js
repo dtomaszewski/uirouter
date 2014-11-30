@@ -1,6 +1,11 @@
-'use strict';
+(function() {
+  'use strict';
+  angular.module('norskApp')
+    .controller('MainCtrl', [MainCtrl]);
 
-angular.module('uirouter')
-  .controller('MainCtrl', function ($scope) {
-    $scope.test = 'asd';
-  });
+  function MainCtrl() {
+    var vm = this;
+  }
+
+})();
+

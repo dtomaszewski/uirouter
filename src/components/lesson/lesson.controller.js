@@ -1,6 +1,14 @@
-'use strict';
+(function() {
+  'use strict';
 
-angular.module('uirouter')
-  .controller('LessonCtrl', function ($scope, LessonService) {
-    $scope.lessons = LessonService.getLessons();
-  });
+  angular.module('lesson')
+    .controller('LessonCtrl', ['LessonService', LessonCtrl]);
+
+  function LessonCtrl(LessonService) {
+    var vm = this;
+
+    LessonService.query(function(data) {
+      vm.lessons = data;
+    })
+  }
+})();

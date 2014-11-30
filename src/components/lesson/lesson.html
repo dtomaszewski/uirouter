@@ -1,6 +1,6 @@
-<div class="row">
+<div class="row lesson">
   <ul class="nav nav-tabs">
-    <li ng-repeat="lesson in lessons">
+    <li ng-repeat="lesson in vm.lessons">
       <a ng-href="#/lesson/{{ lesson.number }}">Leksjon {{ lesson.number }}</a>
     </li>
   </ul>
