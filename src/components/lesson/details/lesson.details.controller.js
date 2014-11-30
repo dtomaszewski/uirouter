@@ -2,7 +2,7 @@
   'use strict';
 
 
-  angular.module('lesson')
+  angular.module('lesson.details', [])
     .controller('LessonDetailsCtrl', ['LessonService', '$stateParams', LessonDetailsCtrl]);
 
 
