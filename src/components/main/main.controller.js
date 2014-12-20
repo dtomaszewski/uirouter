@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('norskApp')
+  angular.module('uirouter')
     .controller('MainCtrl', [MainCtrl]);
 
   function MainCtrl() {

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" ng-app="norskApp">
+<html class="no-js" ng-app="uirouter">
   <head>
     <meta charset="utf-8">
     <title>frontend</title>
@@ -53,17 +53,18 @@
     <!-- endbuild -->
 
     <!-- build:js({.tmp,src}) scripts/app.js -->
-    <script src="app/index.js"></script>
-    <script src="components/main/main.controller.js"></script>
-    <script src="components/lesson/lesson.js"></script>
+
+    <script src="components/lesson/lesson.module.js"></script>
     <script src="components/lesson/service/lesson.service.js"></script>
     <script src="components/lesson/service/lesson.service.mock.js"></script>
     <script src="components/lesson/lesson.controller.js"></script>
     <script src="components/lesson/details/lesson.details.controller.js"></script>
-    <script src="components/words/words.js"></script>
+    <script src="components/words/words.module.js"></script>
     <script src="components/words/service/words.service.js"></script>
     <script src="components/words/service/words.service.mock.js"></script>
     <script src="components/words/words.controller.js"></script>
+    <script src="app/index.js"></script>
+    <script src="components/main/main.controller.js"></script>
 
     <!-- inject:partials -->
     <!-- angular templates will be automaticaly converted in js and inserted here -->

@@ -21,7 +21,7 @@ gulp.task('styles', ['wiredep'],  function () {
 });
 
 gulp.task('scripts', function () {
-  return gulp.src('src/{app,components}/**/*.js')
+  return gulp.src(['src/{app,components}/**/*.js', 'src/{app,components}/**/**/*.js'])
     .pipe($.jshint())
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.size());
@@ -48,7 +48,7 @@ gulp.task('html', ['styles', 'scripts', 'partials'], function () {
   var assets;
 
   return gulp.src('src/*.html')
-    .pipe($.inject(gulp.src('.tmp/{app,components}/**/*.js'), {
+    .pipe($.inject(gulp.src(['.tmp/{app,components}/**/*.js', '.tmp/{app,components}/**/**/*.js']), {
       read: false,
       starttag: '<!-- inject:partials -->',
       addRootSlash: false,
@@ -58,7 +58,7 @@ gulp.task('html', ['styles', 'scripts', 'partials'], function () {
     .pipe($.rev())
     .pipe(jsFilter)
     .pipe($.ngAnnotate())
-    .pipe($.uglify({preserveComments: $.uglifySaveLicense}))
+    //.pipe($.uglify({preserveComments: $.uglifySaveLicense}))
     .pipe(jsFilter.restore())
     .pipe(cssFilter)
     .pipe($.replace('bower_components/bootstrap-sass-official/assets/fonts/bootstrap','fonts'))
